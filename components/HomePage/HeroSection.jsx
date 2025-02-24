@@ -28,7 +28,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <img src="/assets/hero-image.png" alt="Hero Section" />
+        <img src="/public/assets/hero-image.png" alt="Hero Section" />
 
         {/* Buttons */}
         <div className="button-container mt-8 space-x-4">
@@ -43,7 +43,7 @@ const Hero = () => {
 
       {/* Logo */}
       <img
-        src="/assets/buy.png" // Ensure the path is correct
+        src="/public/assets/buy.png" // Ensure the path is correct
         alt="Logo"
         className="logo"
       />
