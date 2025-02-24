@@ -7,7 +7,7 @@ const Donate = ({ setDonationBox, setMembership }) => {
     setIsPlaying(true);
   };
   return (
-    <div className="fixed bottom-0 sm:bottom-14 m-4 left-0 w-64 bg-[#053f14] shadow-lg rounded-lg overflow-hidden">
+    <div className="fixed bottom-0 sm:bottom-14 m-4 left-0 w-64 bg-[##053f14] -lg rounded-lg overflow-hidden">
       {!isPlaying && (
         <img
           onClick={handleClick}
@@ -21,8 +21,8 @@ const Donate = ({ setDonationBox, setMembership }) => {
         <>
           <video className="w-full h-52" controls autoPlay>
             <source
-              src="https://movieapp.nyc3.digitaloceanspaces.com/Pro%20Blockchain%20Course.mp4"
-              type="video/mp4"
+             src="https://gateway.pinata.cloud/ipfs/bafybeidyxcadbnhs4actnkcvmlktxwdzumm6r6mkcgczj4k3pheysq2rgy"
+             type="video/mp4" 
             />
             Your browser dose not support the video tag
           </video>

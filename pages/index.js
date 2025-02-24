@@ -158,23 +158,9 @@ const index = () => {
       <div className="w-full minmd:w-5/5">
         <HeroSection nftImage={nftImage} />
 
-        {isLoading ? (
-          // <h1 className="font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold ml-4 xs:ml-0">
-          //   That&apos;s sorry, No NFTs for Sale!
-          // </h1>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              height: "50vh",
-            }}
-          >
-            <Loader />
-          </div>
-        ) : !nfts.length ? (
-          <div className="mt-100 p-7 rounded-lg shadow-lg bg-[#053f14] mx-auto block">
-            <img src="/cryptokig.jpg" alt="" srcSet="" />
+        {!nfts.length ? (
+          <div className="mt-100 p-7 rounded-lg shadow-lg bg-[#636664] mx-auto block">
+            {/* Removed CryptoKing image */}
           </div>
         ) : (
           <>
