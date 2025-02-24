@@ -1,13 +1,23 @@
 import React from "react";
-import { useRouter } from 'next/router';  // Import useRouter hook
-import Image from 'next/image';
 
 const Hero = () => {
   return (
     <div id="home" className="flat-pages-title-home2 relative">
       {/* Video Background */}
       <div className="video-container">
-        <video autoPlay loop muted className="video-background">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="video-background"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            pointerEvents: "none", // Prevents clicking/tapping from affecting the video
+          }}
+        >
           <source src="/assets/tennesse.MP4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -20,12 +30,7 @@ const Hero = () => {
         {/* Box Containing the New Text */}
         <div className="text-box">
           <p className="hero-subtext">
-            “Welcome to MOBOTECH: The Future of Hunting and Digital Innovation.”
-            Join the next evolution in hunting. MOBOTECH empowers hunters, gear
-            makers, and tech enthusiasts to buy, sell, and trade hunting gear and
-            exclusive NFTs. List your products, connect with a global community,
-            and earn rewards in the process. Whether you’re a vendor or a
-            collector, MOBOTECH is your gateway to the digital frontier of hunting.
+         
           </p>
         </div>
 
@@ -44,17 +49,15 @@ const Hero = () => {
 
       {/* Logo */}
       <img
-        src="/assets/buy.png" // Ensure the path is correct
+        src="/assets/buy.png"
         alt="Logo"
         className="logo"
       />
 
       {/* Custom Styles */}
       <style jsx global>{`
-        /* Import the Orbitron font */
         @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
-        /* Video Background */
         .video-container {
           position: absolute;
           top: 0;
@@ -67,9 +70,9 @@ const Hero = () => {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          pointer-events: none;
         }
 
-        /* Hero Section Content */
         .hero-content {
           position: absolute;
           top: 0;
@@ -86,63 +89,57 @@ const Hero = () => {
           padding: 20px;
         }
 
-        /* Adjusted Image Box Position */
         .hero-content img {
           max-width: 600px;
           height: 500px;
           border-radius: 50px;
           position: absolute;
-          left: calc(50% + 6in); /* Move 6 inches to the right */
-          top: calc(50% - 1.5in); /* Move 2 inches up */
+          left: calc(50% + 6in);
+          top: calc(50% - 1in);
           transform: translate(-50%, -50%);
         }
 
-        /* Adjusted Text Box Position */
         .hero-content h1 {
           font-size: 3rem;
           font-weight: bold;
           margin-bottom: 20px;
           position: absolute;
-          left: calc(50% - 4.2in); /* Move 2 inches to the left */
-          top: calc(50% - 2in); /* Move 1 inch down */
+          left: calc(50% - 2.3in);
+          top: calc(50% - 0in);
           transform: translate(-50%, -50%);
-          font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
+          font-family: 'Orbitron', sans-serif;
         }
 
-        /* Box Containing the New Text */
         .text-box {
-          width: 6in; /* 6 inches wide */
-          height: 2.5in; /* 2.5 inches tall (you can adjust to 2 or 3 inches if you prefer) */
+          width: 6in;
+          height: 3.5in;
           display: flex;
-          justify-content: flex-start; /* Align text to the left */
-          align-items: flex-start; /* Align content to the top */
-          background-color: rgba(0, 0, 0, 0.0); /* Slightly transparent background */
+          justify-content: flex-start;
+          align-items: flex-start;
+          background-color: rgba(0, 0, 0, 0.0);
           border-radius: 8px;
           padding: 10px;
           position: absolute;
-          left: calc(50% - 6in); /* Center horizontally with 6in width */
-          top: calc(50% - 1.5in); /* Adjust positioning as necessary */
+          left: calc(50% - 4in);
+          top: calc(50% - 5.5in);
         }
 
-        /* Smaller Text Inside the Box */
         .hero-subtext {
-          font-size: 1rem; /* Smaller font size */
+          font-size: 1rem;
           color: white;
-          text-align: left; /* Align the text to the left */
-          font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
+          text-align: left;
+          font-family: 'Orbitron', sans-serif;
         }
 
-        /* Logo Styling */
         .logo {
           position: absolute;
-          top: 20px; /* Position logo 20px from the top */
-          left: 335px; /* Position logo 20px from the left */
-          width: 150px; /* Adjust the width of the logo */
+          top: 55px;
+          left: 525px;
+          width: 250px;
           height: auto;
-          z-index: 2; /* Make sure it stays on top */
+          z-index: 2;
         }
 
-        /* Parent container for the hero section */
         .flat-pages-title-home2 {
           position: relative;
           width: 100%;
@@ -150,70 +147,76 @@ const Hero = () => {
           overflow: hidden;
         }
 
-        /* Button Container */
         .button-container {
-          position: absolute; /* Absolute positioning for custom placement */
-          top: calc(50% + 1in); /* Move 2 inches down */
-          left: calc(50% - 3in); /* Move 2 inches to the left */
-          transform: translate(-50%, -50%); /* Center the buttons */
-          margin-top: 0; /* Remove default margin for consistent positioning */
+          position: absolute;
+          top: calc(50% + 1in);
+          left: calc(50% - 2.4in);
+          transform: translate(-50%, -50%);
+          margin-top: 0;
           display: flex;
           justify-content: center;
         }
 
         .button-container a {
-          margin: 0 10px;
-          padding: 14px 28px; /* Default padding for computer layout */
+          margin: 0 110px;
+          padding: 10px 28px;
           font-size: 1rem;
         }
 
-        /* Responsive Styles for iPhone */
         @media (max-width: 768px) {
           .button-container {
-            position: static; /* Remove absolute positioning for simplicity */
-            top: auto;
-            left: auto;
-            transform: none; /* Reset transform */
-            margin-top: 20px; /* Add margin for spacing */
+            position: absolute;
+            top: 410px;
+            left: 34px;
+            transform: none;
+            margin-top: 10px;
+            
+          }
+             @media (max-width: 768px) {
+          .hero-content h1 {
+            font-size:2rem;
+            position: absolute;
+            top: 550px;
+            left: 50px;
+            transform: none;
+            margin-top: 400px;
+            
           }
 
           .button-container a {
-            padding: 10px 20px; /* Smaller padding for iPhone layout */
-            font-size: 0.9rem; /* Adjust font size for smaller screens */
+            padding: 5px 20px;
+            font-size: 0.9rem;
           }
-        }
 
-        /* Responsive Styles for iPhone */
-        @media (max-width: 768px) {
           .hero-content h1 {
-            font-size: 1.5rem; /* Smaller font for iPhone */
-            position: static; /* Remove absolute positioning for simplicity */
-            margin-bottom: 20px;
+            font-size: 1.5rem;
+            position: static;
+            margin-bottom: 0px;
           }
 
           .hero-content img {
             max-width: 90%;
             height: auto;
-            position: relative; /* Remove absolute positioning */
-            margin: 0 auto; /* Center image */
+            position: relative;
+            margin: 0 auto;
           }
 
           .text-box {
-            width: 90%; /* Make the text box fit the screen width */
-            height: 50px; /* Adjust height dynamically */
-            padding: 0px;
-            position: static; /* Remove absolute positioning */
-            margin: 0 auto; /* Center the box */
+            width: 90%;
+            height: 20px;
+            padding: 10px;
+            position: static;
+            margin: auto ;
           }
 
           .hero-subtext {
-            font-size: 0.9rem; /* Slightly smaller text */
+            font-size: 0.9rem;
           }
 
           .logo {
-            width: 80px; /* Adjust logo size for smaller screens */
-            top: 30px;
-            left: 80px;
+            width: 180px;
+            top: 155px;
+            left: 110px;
           }
         }
       `}</style>

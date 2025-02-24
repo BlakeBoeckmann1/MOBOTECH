@@ -1,7 +1,7 @@
 import React from "react";
 
-//INTERNAL IMPORT
-import { Google, Apple } from "../index";
+// INTERNAL IMPORT
+// Removed Google and Apple imports as we're not using them now
 
 const Action = () => {
   return (
@@ -12,26 +12,15 @@ const Action = () => {
             THE WORLDS FIRST CRYPTO HUNTING MARKETPLACE
           </p>
           <h1 className="py-2 text-3xl font-medium leadti title-font text-[#fff]">
-            MOBOTECH  Marketplace
+            MOBOTECH Marketplace
           </h1>
         </div>
 
-        <div className="flex md:flex-col flex-col items-center justify-start flex-shrink-0 mt-6 space-y-4 sm:space-y-0 sm:space-x-4 lg:ml-4 lg:mt-0 lg:justify-end sm:grid sm:gap-2">
-          <button className="inline-flex items-center px-6 py-3 rounded-lg bg-[#1a1a1a] text-[#fff]">
-            <Google />
-            <span className="flex flex-col items-start ml-4 leadi">
-              <span className="mb-1 text-xs">GET IT ON</span>
-              <span className="font-semibold title-font">Google Play</span>
-            </span>
-          </button>
-
-          <button className="inline-flex items-center px-6 py-3 rounded-lg bg-[#1a1a1a] text-[#fff]">
-            <Apple />
-            <span className="flex flex-col items-start ml-4 leadi">
-              <span className="mb-1 text-xs">Download on the</span>
-              <span className="font-semibold title-font">Apple Store </span>
-            </span>
-          </button>
+        {/* New Text Section under the marketplace title */}
+        <div className="flex flex-col justify-center lg:text-left mt-6 space-y-4 sm:space-y-0 sm:space-x-4 lg:ml-4 lg:mt-0 lg:justify-end sm:grid sm:gap-2">
+          <p className="text-sm font-medium text-[#fff]">
+            Welcome to the Mobotech Marketplace – where technology and hunting converge. Explore and engage in the most innovative platform for hunters and crypto enthusiasts alike.
+          </p>
         </div>
       </div>
     </section>
