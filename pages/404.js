@@ -17,6 +17,7 @@ const MoboGobblerPage = () => {
             loop
             muted
             playsInline
+            poster= "/assets/yourvideo.jpg"
             className="w-full h-full object-cover absolute top-0 left-0"
             style={{ pointerEvents: "none" }}
           >
