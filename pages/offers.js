@@ -11,21 +11,13 @@ const offers = () => {
       image: images.nft,
       link: "/nft-auction",
     },
-    {
-      offer: "FeedBack",
-      image: images.support,
-      link: "/support",
-    },
+    
     {
       offer: "Token Sale",
       image: images.stacking,
       link: "/token-sale",
     },
-    {
-      offer: "Transfer Funds",
-      image: images.transfer,
-      link: "/transferFunds",
-    },
+    
     {
       offer: "Community",
       image: images.community,
