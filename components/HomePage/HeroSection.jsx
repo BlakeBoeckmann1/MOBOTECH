@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -22,13 +23,13 @@ const Hero = () => {
         <img src="/assets/hero-image.jpg" alt="Hero" className="hero-image" />
       </div>
 
-      {/* Grouped Content Box */}
-      <div className="content-box">
+     {/* Grouped Content Box */}
+     <div className="content-box">
         <img src="/assets/buy.png" alt="Logo" className="logo" />
         <h1 className="mobotex-text">MOBOTECH</h1>
-        <div className="decoy-box">
+        <a href="/buy-decoy" className="decoy-box">
           <p>BUY DECOY</p>
-        </div>
+        </a>
       </div>
 
       {/* Styles */}

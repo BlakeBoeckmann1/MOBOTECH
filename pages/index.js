@@ -159,7 +159,7 @@ const index = () => {
         <HeroSection nftImage={nftImage} />
 
         {!nfts.length ? (
-          <div className="mt-100 p-7 rounded-lg shadow-lg bg-[#636664] mx-auto block">
+          <div className="mt-100 p-7 rounded-lg shadow-lg bg-[#053f14] mx-auto block">
             {/* Removed CryptoKing image */}
           </div>
         ) : (
