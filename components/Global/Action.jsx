@@ -24,9 +24,9 @@ const Action = () => {
           text-decoration: none;
           border-radius: 8px;
           transition: all 0.3s ease-in-out;
+          margin: 5px; /* Added gap between buttons */
         }
 
-        /* Styles for the Create button */
         .create-button {
           background-color: transparent;
           color: #ffcc00;
@@ -38,7 +38,6 @@ const Action = () => {
           color: #000;
         }
 
-        /* Styles for the Connect Wallet button */
         .connect-button {
           background-color: #ffcc00;
           color: #000;
@@ -50,15 +49,15 @@ const Action = () => {
           border-color: #ffaa00;
         }
 
-        @media (max-width: 768px) {
-          .button-container {
-            margin-top: 30px;
-          }
+        .download-button {
+          background-color: #ff6600;
+          color: #fff;
+          border: 2px solid #ff6600;
+        }
 
-          .button-container button {
-            padding: 10px 20px;
-            font-size: 0.9rem;
-          }
+        .download-button:hover {
+          background-color: #cc5500;
+          border-color: #cc5500;
         }
       `}</style>
 
@@ -82,6 +81,16 @@ const Action = () => {
           </div>
 
           <div className="button-container mt-4">
+            {!currentAccount && (
+              <Button
+                btnName="Create Wallet"
+                btnType="outline"
+                classStyle="mx-2 rounded download-button"
+                handleClick={() => {
+                  window.open("https://metamask.io/download.html", "_blank");
+                }}
+              />
+            )}
             {currentAccount ? (
               <Button
                 btnName="Create"
