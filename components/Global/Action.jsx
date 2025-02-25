@@ -16,41 +16,47 @@ const Action = () => {
           text-align: center;
         }
 
-        .button-container a {
+        .button-container button {
           display: inline-block;
-          background-color: #ffcc00;
-          color: #000;
           padding: 12px 24px;
           font-size: 1rem;
           font-weight: bold;
           text-decoration: none;
           border-radius: 8px;
+          transition: all 0.3s ease-in-out;
         }
 
-        .button-container a:hover {
+        /* Styles for the Create button */
+        .create-button {
+          background-color: transparent;
+          color: #ffcc00;
+          border: 2px solid #ffcc00;
+        }
+
+        .create-button:hover {
+          background-color: #ffcc00;
+          color: #000;
+        }
+
+        /* Styles for the Connect Wallet button */
+        .connect-button {
+          background-color: #ffcc00;
+          color: #000;
+          border: 2px solid #ffcc00;
+        }
+
+        .connect-button:hover {
           background-color: #ffaa00;
+          border-color: #ffaa00;
         }
 
         @media (max-width: 768px) {
-          .container {
-            padding: 20px;
-            text-align: center;
-          }
-
           .button-container {
             margin-top: 30px;
           }
 
-          .button-container a {
+          .button-container button {
             padding: 10px 20px;
-            font-size: 0.9rem;
-          }
-
-          .title-font {
-            font-size: 2rem;
-          }
-
-          .text-sm {
             font-size: 0.9rem;
           }
         }
@@ -80,7 +86,7 @@ const Action = () => {
               <Button
                 btnName="Create"
                 btnType="primary"
-                classStyle="mx-2 rounded"
+                classStyle="mx-2 rounded create-button"
                 handleClick={() => {
                   window.location.href = "/create-nft";
                 }}
@@ -89,7 +95,7 @@ const Action = () => {
               <Button
                 btnName="Connect Wallet"
                 btnType="outline"
-                classStyle="mx-2 rounded"
+                classStyle="mx-2 rounded connect-button"
                 handleClick={connectWallet}
               />
             )}
