@@ -26,24 +26,26 @@ const MoboGobblerPage = () => {
         </div>
       </section>
 
-      {/* Mobo Gobbler Text and Button Section */}
-      <section className="absolute top-0 left-0 w-full h-screen flex items-center justify-center text-center px-8">
-        <div className="bg-black bg-opacity-50 text-white p-8 rounded-lg">
-          <h2 className="text-4xl font-bold mb-6">MOBOTECH</h2>
-          <p className="text-xl mb-6 leading-relaxed"></p>
+    {/* Mobo Gobbler Text and Button Section */}
+<section className="absolute top-0 left-0 w-full h-screen flex items-center justify-center text-center px-8">
+  <div className="text-white p-8">  {/* Removed bg-black bg-opacity-50 and rounded-lg */}
+    {/* Logo Image */}
+    <img src="/assets/logo.png" alt="Mobo Gobbler Logo" className="mx-auto mb-4 w-40 h-auto" />
+    
+    <h2 className="text-4xl font-bold mb-6">MOBOTECH</h2>
+    <p className="text-xl mb-6 leading-relaxed"></p>
 
-          {/* Buy Decoy Button */}
-          <div className="mt-8">
-            <button
-              onClick={handleCheckout}
-              className="px-6 py-3 bg-green-800 text-white rounded-lg text-lg"
-            >
-              Buy Decoy
-            </button>
-          </div>
-        </div>
-      </section>
-
+    {/* Buy Decoy Button */}
+    <div className="mt-8">
+      <button
+        onClick={handleCheckout}
+        className="px-6 py-3 bg-green-800 text-white rounded-lg text-lg"
+      >
+        Buy Decoy
+      </button>
+    </div>
+  </div>
+</section>
       {/* Showcase Videos Section */}
       <section className="w-full bg-gray-900 text-white py-16">
         <div className="text-center mb-8">
