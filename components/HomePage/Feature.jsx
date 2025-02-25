@@ -27,10 +27,10 @@ const Feature = () => {
             />
           </div>
           <h3 className="text-lg font-bold text-white mb-2">
-            Set Up Your Wallet
+          Get Started in Seconds
           </h3>
           <p className="text-sm text-gray-300 leading-6">
-            Prepare your wallet to start using the platform
+          Set up your wallet to access exclusive hunting NFTs.
           </p>
         </div>
 
@@ -44,10 +44,10 @@ const Feature = () => {
             />
           </div>
           <h3 className="text-lg font-bold text-white mb-2">
-            Create Collection
+          Claim Your First Hunting Collectible
           </h3>
           <p className="text-sm text-gray-300 leading-6">
-            Organize and manage your NFTs by creating a collection
+          Browse and choose from limited-edition hunting NFTs that represent achievements, gear, or access to hunting experiences.
           </p>
         </div>
 
@@ -61,10 +61,10 @@ const Feature = () => {
             />
           </div>
           <h3 className="text-lg font-bold text-white mb-2">
-            Add your NFTs
+          Earn Exclusive Perks & Future MoboCoin Rewards
           </h3>
           <p className="text-sm text-gray-300 leading-6">
-            Upload and showcase your NFTs in your collection
+          Get discounts on real hunting gear, access to premium events, and early MoboCoin rewards when it launches. 
           </p>
         </div>
 
