@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -23,12 +22,20 @@ const Hero = () => {
         <img src="/assets/hero-image.jpg" alt="Hero" className="hero-image" />
       </div>
 
-     {/* Grouped Content Box */}
-     <div className="content-box">
+      {/* Grouped Content Box */}
+      <div className="content-box">
         <img src="/assets/buy.png" alt="Logo" className="logo" />
         <h1 className="mobotex-text">MOBOTECH</h1>
         <a href="/buy-decoy" className="decoy-box">
           <p>BUY DECOY</p>
+        </a>
+        <a
+          href="https://youtu.be/V00pXilyVnI?feature=shared"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="youtube-button"
+        >
+          <p>WATCH VIDEO</p>
         </a>
       </div>
 
@@ -53,7 +60,7 @@ const Hero = () => {
           left: 0;
           width: 100%;
           height: 100%;
-          overflow:hidden
+          overflow: hidden;
         }
 
         .video-background {
@@ -69,7 +76,7 @@ const Hero = () => {
           left: 0;
           width: 100%;
           height: 100%;
-          z-index: -2; /* Image stays behind the video */
+          z-index: -2;
         }
 
         .hero-image {
@@ -83,13 +90,12 @@ const Hero = () => {
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          background: rgba(0, 0, 0, 0.);
+          background: rgba(0, 0, 0, 0.6);
           padding: 20px;
           border-radius: 10px;
           text-align: center;
           color: white;
           z-index: 1;
-          width: auto;
         }
 
         .logo {
@@ -103,11 +109,30 @@ const Hero = () => {
           margin-bottom: 10px;
         }
 
-        .decoy-box {
+        .decoy-box,
+        .youtube-button {
+          display: inline-block;
           background-color: #053f14;
           padding: 10px 20px;
           border-radius: 5px;
           font-size: 1.5rem;
+          margin-top: 10px;
+          color: white;
+          text-decoration: none;
+          transition: background 0.3s;
+        }
+
+        .youtube-button {
+          background-color: #c4302b; /* YouTube Red */
+        }
+
+        .decoy-box:hover,
+        .youtube-button:hover {
+          background-color: #0b6c25;
+        }
+
+        .youtube-button:hover {
+          background-color: #ff0000;
         }
 
         @media (max-width: 768px) {
@@ -119,7 +144,8 @@ const Hero = () => {
             font-size: 1.5rem;
           }
 
-          .decoy-box {
+          .decoy-box,
+          .youtube-button {
             font-size: 1.2rem;
             padding: 8px 16px;
           }
